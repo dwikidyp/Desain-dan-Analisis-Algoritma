@@ -1,0 +1,22 @@
+@startuml kampus
+top to bottom direction
+
+actor Mahasiswa as mhs
+actor Dosen as dsn
+
+package Kampus {
+    usecase "Menerima Penjadwalan Kuliah" as U1
+    usecase "pilih Matkul" as U2
+    usecase "Ruang Kelas" as U3
+    usecase "Jadwal Kuliah" as U4
+    usecase "Mengajar" as U5
+
+}
+
+mhs --> U1
+mhs --> U2
+dsn --> U5
+U2 .> U3 : extends
+U2 .> U4 : extends
+
+@enduml
